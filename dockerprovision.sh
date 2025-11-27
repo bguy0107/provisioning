@@ -1,13 +1,17 @@
 !#/bin/bash
 # This script downloads all updates after a fresh Ubuntu install and installs Docker compose and its depencies
 
-echo "Updating Ubuntu packages and installing nano/net-tools..."
+GREEN='\e[32m'
+NC='\e[0m'
+
+
+echo "${GREEN}Updating Ubuntu packages and installing nano/net-tools...${NC}"
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install nano
 sudo apt install net-tools
 
-echo "\e[32mAll system upgrades installed, installing docker repository dependencies..."
+echo "${GREEN}All system upgrades installed, installing docker repository dependencies...${NC}"
 
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -22,12 +26,12 @@ Components: stable
 Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
-echo "Docker repository dependencies installed, installing docker engine and docker compose..."
+echo "${GREEN}Docker repository dependencies installed, installing docker engine and docker compose...${NC}"
 sudo apt update -y
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 echo "Docker engine and docker compose installed."
 echo "Verifying docker installation..."
 sudo docker --version
 sudo docker compose version
-echo "Docker installation verified."
-echo "Docker setup complete."
+echo "${GREEN}Docker installation verified.${NC}"
+echo "{$GREEN}Docker setup complete.${NC}"
