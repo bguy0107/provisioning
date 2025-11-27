@@ -4,8 +4,7 @@
 GREEN='\e[32m'
 NC='\e[0m'
 
-${GREEN}
-echo "Updating Ubuntu packages and installing nano/net-tools..."
+echo ${GREEN}"Updating Ubuntu packages and installing nano/net-tools..."${NC}
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install nano
@@ -35,4 +34,3 @@ sudo docker --version
 sudo docker compose version
 echo "Docker installation verified."
 echo "Docker setup complete."
-${NC}
