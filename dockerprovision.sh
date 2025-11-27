@@ -10,7 +10,7 @@ sudo apt upgrade -y
 sudo apt install nano
 sudo apt install net-tools
 
-echo "All system upgrades installed, installing docker repository dependencies..."
+echo -e "${GREEN}All system upgrades installed, installing docker repository dependencies...${NC}"
 
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -25,12 +25,11 @@ Components: stable
 Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
-echo "Docker repository dependencies installed, installing docker engine and docker compose..."
+echo -e "${GREEN}Docker repository dependencies installed, installing docker engine and docker compose...${NC}"
 sudo apt update -y
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-echo "Docker engine and docker compose installed."
-echo "Verifying docker installation..."
+echo -e "${GREEN}Docker engine and docker compose installed. Verifying installations...${NC}"
 sudo docker --version
 sudo docker compose version
-echo "Docker installation verified."
-echo "Docker setup complete."
+echo -e "${GREEN}Docker installation verified.${NC}"
+echo -e "${GREEN}Docker setup complete.${NC}"
