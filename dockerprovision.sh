@@ -4,14 +4,14 @@
 GREEN='\e[32m'
 NC='\e[0m'
 
-
-echo "${GREEN}Updating Ubuntu packages and installing nano/net-tools...${NC}"
+${GREEN}
+echo "Updating Ubuntu packages and installing nano/net-tools..."
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install nano
 sudo apt install net-tools
 
-echo "${GREEN}All system upgrades installed, installing docker repository dependencies...${NC}"
+echo "All system upgrades installed, installing docker repository dependencies..."
 
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -26,12 +26,13 @@ Components: stable
 Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
-echo "${GREEN}Docker repository dependencies installed, installing docker engine and docker compose...${NC}"
+echo "Docker repository dependencies installed, installing docker engine and docker compose..."
 sudo apt update -y
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 echo "Docker engine and docker compose installed."
 echo "Verifying docker installation..."
 sudo docker --version
 sudo docker compose version
-echo "${GREEN}Docker installation verified.${NC}"
-echo "{$GREEN}Docker setup complete.${NC}"
+echo "Docker installation verified."
+echo "Docker setup complete."
+${NC}
