@@ -4,8 +4,10 @@
 echo "Updating Ubuntu packages..."
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install nano
+sudo apt install net-tools
 
-echo "All upgrades installed, installing docker repository dependencies..."
+echo "All system upgrades installed, installing docker repository dependencies..."
 
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
