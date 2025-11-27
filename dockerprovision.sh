@@ -32,4 +32,4 @@ echo -e "${GREEN}Docker engine and docker compose installed. Verifying installat
 sudo docker --version
 sudo docker compose version
 echo -e "${GREEN}Docker installation verified.${NC}"
-echo -e "${GREEN}Docker setup complete.${NC}"
+echo -e "${GREEN}All system upgrades have been completed. Docker Engine and Compose are installed. You may begin executing docker compose files.${NC}"
