@@ -1,13 +1,13 @@
 !#/bin/bash
 # This script downloads all updates after a fresh Ubuntu install and installs Docker compose and its depencies
 
-echo "Updating Ubuntu packages..."
+echo "Updating Ubuntu packages and installing nano/net-tools..."
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install nano
 sudo apt install net-tools
 
-echo "All system upgrades installed, installing docker repository dependencies..."
+echo "\e[32mAll system upgrades installed, installing docker repository dependencies..."
 
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
