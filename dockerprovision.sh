@@ -4,7 +4,7 @@
 GREEN='\e[32m'
 NC='\e[0m'
 
-echo ${GREEN}"Updating Ubuntu packages and installing nano/net-tools..."${NC}
+echo -e "${GREEN}Updating Ubuntu packages and installing nano/net-tools...${NC}"
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install nano
